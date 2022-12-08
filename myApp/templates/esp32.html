@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DB Table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.6">
+</head>
+
+<body>
+<!-- _____________________________________________________________________________________________
+CSS styling.... -->
+
+<style>
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 500px;
+    min-height: 60px; 
+    vertical-align: top;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /*width:30%;*/
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 10px 5px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.styled-table tr:hover {background-color: #D6EEEE;}
+</style>
+
+<style>
+.button2 {
+  padding: 9px 22px;
+  font-size: 14px;
+  font-family: "arial";
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #517A68;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 6px #999;
+  position: relative;
+}
+/*.button1:hover {background-color: #A1A474}*/
+.button2:active {
+  background-color: #06AB79;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+.button_position6 {
+  top:2px;
+  left:20px;
+}
+</style>
+
+
+<!-- ___________________________________________________________________________________________________
+HTML Code..... -->
+
+  <div class="container mt-3">
+    <h2 style="position:relative; left:180px; top:5px;">Database Name: sbdb</h2>
+    <h2 style="position:relative; left:180px; top:0px;">Table name: Table_ESP32</h2>
+    <table class="styled-table" style="position:absolute; left:140px; top:90px;">
+      <tbody> 
+        <thead>
+          <tr>
+              <th>LED</th>
+              <th>Temperature</th>
+          </tr> 
+        </thead>
+        </tbody>
+        <tbody>
+          {% for i in all_data_key2 %}
+          <tr>
+              <td style="width:200px">{{i.led1}}</td>
+              <td style="width:50px"><centre>{{i.temp1}}</centre></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <button class="button2 button_position6" onclick="location.href='/';"><b>Home</b></button>
+    </div>
+</body>
+</html>
