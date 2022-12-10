@@ -1,0 +1,52 @@
+
+# Update
+sudo apt-get update
+
+# Install Python3
+sudo apt-get install python3
+
+# Check Python version
+python3 -V
+
+# Install pip
+
+# Check pip version
+pip3 -V
+
+# Install Nginx
+sudo apt install nginx
+sleep 2s
+
+# Nginx version
+nginx -V
+
+
+# Install virtual environment
+# sudo apt install python3-virtualenv
+sudo pip install virtualenv
+
+# Check virtualenv version
+sudo virtualenv --version
+
+# Create virtual environment
+sudo virtualenv venv
+
+ls -l venv
+
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Install Django
+sudo pip install django
+
+# Install gunicorn
+sudo pip install gunicorn
+
+sudo pip freeze
+
+
+
+# To remove venv
+# $ sudo rm -rf venv
+
